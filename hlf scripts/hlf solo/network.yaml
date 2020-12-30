@@ -1,0 +1,168 @@
+name: Fabric
+version: "1.0"
+
+mutual-tls: false
+
+target_Peers:
+  - peer0
+User: User1
+txns: 10000
+accounts: 10000
+interval: 10  # ms
+
+clients:
+  admin.Org1:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
+  User1:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+
+  User2:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/signcerts/User2@org1.example.com-cert.pem
+
+  admin.Org2:
+    client:
+      organization: Org2
+      credentialStore:
+        path: "/tmp/hfc-kvs/org2"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org2"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+
+  User3:
+    client:
+      organization: Org2
+      credentialStore:
+        path: "/tmp/hfc-kvs/org2"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org2"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/signcerts/User1@org2.example.com-cert.pem
+
+  User4:
+    client:
+      organization: Org2
+      credentialStore:
+        path: "/tmp/hfc-kvs/org2"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org2"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org2.example.com/users/User2@org2.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org2.example.com/users/User2@org2.example.com/msp/signcerts/User2@org2.example.com-cert.pem
+
+channels:
+  mychannel:
+    configBinary: ./channel-artifacts/channel.tx
+    created: true
+    orderers:
+    - orderer
+    peers:
+      peer0:
+        eventSource: true
+      peer1:
+        eventSource: true
+      peer2:
+        eventSource: true
+      peer3:
+        eventSource: true
+    chaincodes:
+    - id: smallbank
+      version: v0
+      targetPeers:
+      - peer0
+      - peer1
+      - peer2
+      - peer3
+      language: golang
+      path: chaincode/scenario/smallbank/go
+
+      endorsement-policy:
+        identities:
+        - role:
+            name: member
+            mspId: Org1MSP
+        - role:
+            name: member
+            mspId: Org2MSP
+        policy:
+          1-of:
+          - signed-by: 0
+          - signed-by: 1
+
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+    - peer0
+    - peer1
+    adminPrivateKey:
+      path: ./crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
+    signedCert:
+      path: ./crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
+
+  Org2:
+    mspid: Org2MSP
+    peers:
+    - peer2
+    - peer3
+    adminPrivateKey:
+      path: ./crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
+    signedCert:
+      path: ./crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+
+orderers:
+  orderer:
+    url: grpc://orderer:7050
+
+peers:
+  peer0:
+    url: grpc://peer0:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer1:
+    url: grpc://localhost:8051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer2:
+    url: grpc://localhost:9051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer3:
+    url: grpc://localhost:10051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000

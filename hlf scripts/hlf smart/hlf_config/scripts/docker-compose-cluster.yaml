@@ -1,0 +1,237 @@
+version: '3'
+
+networks:
+  HLF:
+    external: true
+
+services:
+  # orderers
+  node0:
+    container_name: node0
+    image: '10.22.1.1:5000/fabric-orderingnode:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma1
+    environment:
+      - NODE_CONFIG_DIR=/bft-config/config
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/orderer0_material/:/bft-config/ 
+    command: "0"
+    networks:
+      - HLF
+  node1:
+    container_name: node1
+    image: '10.22.1.1:5000/fabric-orderingnode:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma2
+    environment:
+      - NODE_CONFIG_DIR=/bft-config/config
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/orderer1_material/:/bft-config/ 
+    command: "1"
+    networks:
+      - HLF
+  node2:
+    container_name: node2
+    image: '10.22.1.1:5000/fabric-orderingnode:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma3
+    environment:
+      - NODE_CONFIG_DIR=/bft-config/config
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/orderer2_material/:/bft-config/ 
+    command: "2"
+    networks:
+      - HLF
+  node3:
+    container_name: node3
+    image: '10.22.1.1:5000/fabric-orderingnode:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma4
+    environment:
+      - NODE_CONFIG_DIR=/bft-config/config
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/orderer3_material/:/bft-config/ 
+    command: "3"
+    networks:
+      - HLF
+
+  # frontends
+  frontend0:
+    container_name: frontend0
+    image:  '10.22.1.1:5000/fabric-frontend:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma5
+    environment:
+      - FRONTEND_CONFIG_DIR=/bft-config/config/ 
+      - FABRIC_CFG_PATH=/bft-config/fabric/ 
+      #- ORDERER_GENERAL_LOGLEVEL=DEBUG
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/frontend1000_material:/bft-config/ 
+    command: "1000"
+    networks:
+      - HLF
+    depends_on:
+      - node0 
+      - node1
+      - node2 
+      - node3 
+
+  frontend1:
+    container_name: frontend1
+    image:  '10.22.1.1:5000/fabric-frontend:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma7
+    environment:
+      - FRONTEND_CONFIG_DIR=/bft-config/config/ 
+      - FABRIC_CFG_PATH=/bft-config/fabric/ 
+      - ORDERER_GENERAL_LOGLEVEL=INFO
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/frontend2000_material:/bft-config/ 
+    command: "2000"
+    networks:
+      - HLF
+    depends_on:
+      - node0 
+      - node1
+      - node2 
+      - node3 
+
+  #peers
+  peer0: 
+    container_name: peer0 
+    #image: bftsmart/fabric-peer:amd64-1.3.0
+    image: '10.22.1.1:5000/fabric-peer:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma9
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_PEER_ID=peer0
+      #- CORE_VM_ENDPOINT=http://172.17.0.1:2377
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=HLF
+      - FABRIC_CFG_PATH=/bft-config/fabric/
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/peer0_material:/bft-config/
+    #command: peer node start
+    networks: 
+      - HLF
+    depends_on: 
+      - frontend0
+      - frontend1
+
+  peer1:
+    container_name: peer1
+    #image: bftsmart/fabric-peer:amd64-1.3.0
+    #image: hyperledger/fabric-peer:latest
+    image: '10.22.1.1:5000/fabric-peer:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma1
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_PEER_ID=peer1
+      #- CORE_VM_ENDPOINT=http://172.17.0.1:2377
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=HLF
+      - FABRIC_CFG_PATH=/bft-config/fabric/
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/peer1_material:/bft-config/
+    #command: peer node start
+    networks:
+      - HLF
+    depends_on:
+      - frontend0
+      - frontend1
+  peer2:
+    container_name: peer2
+    image: '10.22.1.1:5000/fabric-peer:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma2
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_PEER_ID=peer2
+      #- CORE_VM_ENDPOINT=http://172.17.0.1:2377
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=HLF
+      - FABRIC_CFG_PATH=/bft-config/fabric/
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/peer2_material:/bft-config/
+    #command: peer node start
+    networks:
+      - HLF
+    depends_on:
+      - frontend0
+      - frontend1
+
+  peer3:
+    container_name: peer3
+    image: '10.22.1.1:5000/fabric-peer:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma3
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_PEER_ID=peer3
+      #- CORE_VM_ENDPOINT=http://172.17.0.1:2377
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=HLF
+      - FABRIC_CFG_PATH=/bft-config/fabric/
+    volumes:
+      - /home/anonymous/share_cluster/fabric_cluster/peer3_material:/bft-config/
+    #command: peer node start
+    networks:
+      - HLF
+    depends_on:
+      - frontend0
+      - frontend1
+
+  cli:
+    container_name: cli
+    image: '10.22.1.1:5000/fabric-tools:anonymous-dev'
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==heming-rdma6
+    tty: true
+    stdin_open: true
+    environment:
+      # - GOPATH=/opt/gopath
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      # - CORE_VM_ENDPOINT=http://172.17.0.1:2375
+      # - CORE_LOGGING_LEVEL=DEBUG
+      - FABRIC_CFG_PATH=/bft-config/fabric 
+      # - CORE_PEER_ID=cli
+      - CORE_PEER_ADDRESS=peer0:7051
+      #- CORE_PEER_MSPCONFIGPATH=/bft-config/fabric/crypto-config/peerOrganizations/ibm.bft/users/Admin\@ibm.bft/msp/
+      - CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/ibm.bft/users/Admin@ibm.bft/msp
+
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash
+    volumes:
+        - /var/run/:/host/var/run/
+        - /home/anonymous/code/fabric-orderingservice/hlf_config/scripts/cli0_material:/bft-config/
+        - ./chaincode/:/opt/gopath/src/github.com/chaincode
+        - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+        - ./scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
+        - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
+    depends_on:
+      - peer0
+      - peer1
+      - peer2
+      - peer3
+    networks:
+      - HLF

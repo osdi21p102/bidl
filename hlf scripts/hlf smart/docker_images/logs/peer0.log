@@ -1,0 +1,49 @@
+[34m2020-07-14 14:22:23.906 UTC [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 1.3.0
+ Commit SHA: ab0a67a
+ Go version: go1.10.4
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.13
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2020-07-14 14:22:23.906 UTC [ledgermgmt] initialize -> INFO 002[0m Initializing ledger mgmt
+[34m2020-07-14 14:22:23.906 UTC [kvledger] NewProvider -> INFO 003[0m Initializing ledger provider
+[34m2020-07-14 14:22:23.924 UTC [kvledger] NewProvider -> INFO 004[0m ledger provider Initialized
+[34m2020-07-14 14:22:23.927 UTC [ledgermgmt] initialize -> INFO 005[0m ledger mgmt initialized
+[34m2020-07-14 14:22:23.928 UTC [peer] func1 -> INFO 006[0m Auto-detected peer address: 10.0.1.92:7051
+[34m2020-07-14 14:22:23.928 UTC [peer] func1 -> INFO 007[0m Host is 0.0.0.0 , falling back to auto-detected address: 10.0.1.92:7051
+[34m2020-07-14 14:22:23.928 UTC [peer] func1 -> INFO 008[0m Auto-detected peer address: 10.0.1.92:7051
+[34m2020-07-14 14:22:23.928 UTC [peer] func1 -> INFO 009[0m Host is 0.0.0.0 , falling back to auto-detected address: 10.0.1.92:7051
+[34m2020-07-14 14:22:23.930 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00a[0m Entering computeChaincodeEndpoint with peerHostname: 10.0.1.92
+[34m2020-07-14 14:22:23.931 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00b[0m Exit with ccEndpoint: 10.0.1.92:7052
+[33m2020-07-14 14:22:23.931 UTC [nodeCmd] createChaincodeServer -> WARN 00c[0m peer.chaincodeListenAddress is not set, using 10.0.1.92:7052
+[34m2020-07-14 14:22:23.933 UTC [sccapi] registerSysCC -> INFO 00d[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+[34m2020-07-14 14:22:23.933 UTC [sccapi] registerSysCC -> INFO 00e[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+[34m2020-07-14 14:22:23.933 UTC [sccapi] registerSysCC -> INFO 00f[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+[34m2020-07-14 14:22:23.934 UTC [sccapi] registerSysCC -> INFO 010[0m system chaincode +lifecycle(github.com/hyperledger/fabric/core/chaincode/lifecycle) registered
+[34m2020-07-14 14:22:23.937 UTC [gossip/service] func1 -> INFO 011[0m Initialize gossip with endpoint 0.peer.ibm.bft:7051 and bootstrap set [0.peer.ibm.bft:7051]
+[34m2020-07-14 14:22:23.943 UTC [gossip/gossip] NewGossipService -> INFO 012[0m Creating gossip service with self membership of { [] [148 123 18 250 28 231 147 50 243 192 146 53 172 228 226 96 52 108 124 108 233 226 118 110 102 42 15 31 54 93 210 120] 0.peer.ibm.bft:7051 <nil> <nil>}
+[33m2020-07-14 14:22:23.944 UTC [gossip/gossip] NewGossipService -> WARN 013[0m External endpoint is empty, peer will not be accessible outside of its organization
+[34m2020-07-14 14:22:23.944 UTC [gossip/gossip] start -> INFO 014[0m Gossip instance 0.peer.ibm.bft:7051 started
+[34m2020-07-14 14:22:23.945 UTC [sccapi] deploySysCC -> INFO 015[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2020-07-14 14:22:23.946 UTC [cscc] Init -> INFO 016[0m Init CSCC
+[34m2020-07-14 14:22:23.946 UTC [sccapi] deploySysCC -> INFO 017[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2020-07-14 14:22:23.946 UTC [qscc] Init -> INFO 018[0m Init QSCC
+[34m2020-07-14 14:22:23.946 UTC [sccapi] deploySysCC -> INFO 019[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2020-07-14 14:22:23.947 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode +lifecycle/(github.com/hyperledger/fabric/core/chaincode/lifecycle) deployed
+[34m2020-07-14 14:22:23.947 UTC [nodeCmd] serve -> INFO 01b[0m Deployed system chaincodes
+[34m2020-07-14 14:22:23.948 UTC [discovery] NewService -> INFO 01c[0m Created with config TLS: false, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2020-07-14 14:22:23.949 UTC [nodeCmd] registerDiscoveryService -> INFO 01d[0m Discovery service activated
+[34m2020-07-14 14:22:23.949 UTC [nodeCmd] serve -> INFO 01e[0m Starting peer with ID=[name:"jdoe" ], network ID=[dev], address=[10.0.1.92:7051]
+[34m2020-07-14 14:22:23.949 UTC [nodeCmd] serve -> INFO 01f[0m Started peer with ID=[name:"jdoe" ], network ID=[dev], address=[10.0.1.92:7051]
+[34m2020-07-14 14:24:52.484 UTC [endorser] callChaincode -> INFO 020[0m [][7e6e3eff] Entry chaincode: name:"cscc" 
+[34m2020-07-14 14:24:52.485 UTC [endorser] callChaincode -> INFO 021[0m [][7e6e3eff] Exit chaincode: name:"cscc"  (1ms)
+[31m2020-07-14 14:24:52.485 UTC [endorser] ProcessProposal -> ERRO 022[0m [][7e6e3eff] simulateProposal() resulted in chaincode name:"cscc"  response status 500 for txid: 7e6e3eff98a4e96f7ee67aba60326479c5d4ba0b520cdbcb4cbf8cc3a4d26c77
+[34m2020-07-14 15:45:00.825 UTC [gossip/gossip] Stop -> INFO 023[0m Stopping gossip
+[34m2020-07-14 15:45:00.826 UTC [gossip/discovery] Stop -> INFO 024[0m Stopping
+[34m2020-07-14 15:45:00.826 UTC [gossip/discovery] Stop -> INFO 025[0m Stopped
+[34m2020-07-14 15:45:00.826 UTC [gossip/comm] Stop -> INFO 026[0m Stopping
+[34m2020-07-14 15:45:00.826 UTC [gossip/comm] Stop -> INFO 027[0m Stopped

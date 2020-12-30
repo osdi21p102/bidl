@@ -1,0 +1,18 @@
+2020-10-12 07:50:49.409 [main] INFO  bft.BFTNode - Starting up ordering node with system channel testchainid
+2020-10-12 07:50:49.411 [main] INFO  bft.BFTNode - This is the signature algorithm: SHA256withECDSA
+2020-10-12 07:50:49.411 [main] INFO  bft.BFTNode - This is the hash algorithm: SHA2
+2020-10-12 07:50:49.418 [main] INFO  b.r.ServerViewController - Creating current view from configuration file
+2020-10-12 07:50:49.522 [Thread-1] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 3
+2020-10-12 07:50:49.547 [Thread-1] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 1
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - ID = 0
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - N = 4
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - F = 1
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Port = 11000
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - requestTimeout = 5000
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - maxBatch = 400
+2020-10-12 07:50:49.693 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Binded replica to IP address 172.23.0.2
+2020-10-12 07:50:49.694 [main] INFO  bftsmart.tom.ServiceReplica - In current view: ID:0; F:1; Processes:0(0.node.bft/172.23.0.2:11000),1(1.node.bft/172.23.0.4:11000),2(2.node.bft/172.23.0.5:11000),3(3.node.bft/172.23.0.3:11000),
+2020-10-12 07:50:50.677 [Thread-1] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 2
+2020-10-12 07:50:54.451 [Server CS] INFO  b.s.strategy.StandardStateManager - Replica state is up to date
+2020-10-12 07:50:54.451 [Delivery Thread] INFO  bftsmart.tom.core.DeliveryThread - Retrieving State
+2020-10-12 07:50:54.452 [Delivery Thread] INFO  bftsmart.tom.core.DeliveryThread - Ready to process operations

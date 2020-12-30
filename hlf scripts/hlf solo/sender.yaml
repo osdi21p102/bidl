@@ -1,0 +1,37 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+version: '3'
+networks:
+  HLF:
+    external: true
+
+services:
+  sendTx:
+    container_name: sender
+    #image: 10.22.1.1:5000/hlf-client-base:anonymous
+    image: 10.22.1.1:5000/fabric-tools:anonymous
+    deploy:
+      mode: replicated
+      replicas: 5
+      placement:
+        constraints:
+          - "node.hostname!=heming-rdma6"
+          - "node.hostname!=hkucs-SYS-1019P-WTR-1"
+          - "node.hostname!=hkucs-SYS-1019P-WTR-2"
+          - "node.hostname!=heming-rdma16"
+    tty: true
+    stdin_open: true
+    # command: rm -rf hfc-key-store || node enrollUser.js User1 && node invoke.js
+    command: /bin/bash
+    volumes:
+        - /home/anonymous/share_cluster/fabric_cluster/FabricClient:/root/FabricClient
+        #- /home/anonymous/share_cluster/fabric_cluster/sendTransaction.sh:/root/FabricClient/sendTransaction.sh
+        #- /home/anonymous/share_cluster/fabric_cluster/network.yaml:/root/FabricClient/network.yaml
+        - /home/anonymous/share_cluster/fabric_cluster/chaincode/:/root/FabricClient/chaincode
+        - /home/anonymous/share_cluster/fabric_cluster/crypto-config:/root/FabricClient/crypto-config
+        - /home/anonymous/share_cluster/fabric_cluster/channel-artifacts:/root/FabricClient/channel-artifacts
+        - /var/run/:/host/var/run/
+    networks:
+      - HLF

@@ -1,0 +1,56 @@
+2020-10-12 07:50:49.405 [main] INFO  bft.BFTNode - Starting up ordering node with system channel testchainid
+2020-10-12 07:50:49.407 [main] INFO  bft.BFTNode - This is the signature algorithm: SHA256withECDSA
+2020-10-12 07:50:49.407 [main] INFO  bft.BFTNode - This is the hash algorithm: SHA2
+2020-10-12 07:50:49.414 [main] INFO  b.r.ServerViewController - Creating current view from configuration file
+2020-10-12 07:50:49.524 [main] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 0
+2020-10-12 07:50:49.536 [main] ERROR b.c.server.ServerConnection - Failed to connect to replica
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at bftsmart.communication.server.ServerConnection.<init>(ServerConnection.java:103)
+	at bftsmart.communication.server.ServersCommunicationLayer.getConnection(ServersCommunicationLayer.java:176)
+	at bftsmart.communication.server.ServersCommunicationLayer.<init>(ServersCommunicationLayer.java:83)
+	at bftsmart.communication.ServerCommunicationSystem.<init>(ServerCommunicationSystem.java:68)
+	at bftsmart.tom.ServiceReplica.init(ServiceReplica.java:151)
+	at bftsmart.tom.ServiceReplica.<init>(ServiceReplica.java:139)
+	at bft.BFTNode.<init>(BFTNode.java:190)
+	at bft.BFTNode.main(BFTNode.java:262)
+2020-10-12 07:50:49.537 [main] ERROR b.c.server.ServerConnection - Failed to connect to replica
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at bftsmart.communication.server.ServerConnection.<init>(ServerConnection.java:103)
+	at bftsmart.communication.server.ServersCommunicationLayer.getConnection(ServersCommunicationLayer.java:176)
+	at bftsmart.communication.server.ServersCommunicationLayer.<init>(ServersCommunicationLayer.java:83)
+	at bftsmart.communication.ServerCommunicationSystem.<init>(ServerCommunicationSystem.java:68)
+	at bftsmart.tom.ServiceReplica.init(ServiceReplica.java:151)
+	at bftsmart.tom.ServiceReplica.<init>(ServiceReplica.java:139)
+	at bft.BFTNode.<init>(BFTNode.java:190)
+	at bft.BFTNode.main(BFTNode.java:262)
+2020-10-12 07:50:49.744 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - ID = 3
+2020-10-12 07:50:49.745 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - N = 4
+2020-10-12 07:50:49.745 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - F = 1
+2020-10-12 07:50:49.745 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Port = 11000
+2020-10-12 07:50:49.745 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - requestTimeout = 5000
+2020-10-12 07:50:49.745 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - maxBatch = 400
+2020-10-12 07:50:49.745 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Binded replica to IP address 172.23.0.3
+2020-10-12 07:50:49.745 [main] INFO  bftsmart.tom.ServiceReplica - In current view: ID:0; F:1; Processes:0(0.node.bft/172.23.0.2:11000),1(1.node.bft/172.23.0.4:11000),2(2.node.bft/172.23.0.5:11000),3(3.node.bft/172.23.0.3:11000),
+2020-10-12 07:50:54.563 [Receiver for 2] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 2
+2020-10-12 07:50:54.563 [Receiver for 1] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 1
+2020-10-12 07:50:55.783 [Server CS] INFO  b.s.strategy.StandardStateManager - Replica state is up to date
+2020-10-12 07:50:55.783 [Delivery Thread] INFO  bftsmart.tom.core.DeliveryThread - Retrieving State
+2020-10-12 07:50:55.783 [Delivery Thread] INFO  bftsmart.tom.core.DeliveryThread - Ready to process operations

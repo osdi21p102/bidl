@@ -1,0 +1,247 @@
+name: Fabric
+version: "1.0"
+
+mutual-tls: false
+
+caliper:
+  blockchain: fabric
+
+info:
+  Version: 1.4.7
+  Size: 1 Orgs with 10 Peers
+  Orderer: Solo
+  Distribution: swarm
+
+clients:
+  User1:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+
+  User2:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/signcerts/User2@org1.example.com-cert.pem
+
+  User3:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User3@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User3@org1.example.com/msp/signcerts/User3@org1.example.com-cert.pem
+
+  User4:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User4@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User4@org1.example.com/msp/signcerts/User4@org1.example.com-cert.pem
+
+  User5:
+    client:
+      organization: Org1
+      credentialStore:
+        path: "/tmp/hfc-kvs/org1"
+        cryptoStore:
+          path: "/tmp/hfc-cvs/org1"
+      clientPrivateKey:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User5@org1.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: ./crypto-config/peerOrganizations/org1.example.com/users/User5@org1.example.com/msp/signcerts/User5@org1.example.com-cert.pem
+
+channels:
+  mychannel:
+    configBinary: ./channel-artifacts/channel.tx
+    created: true
+    orderers:
+    - orderer
+    peers:
+      peer0:
+        eventSource: true
+      peer1:
+        eventSource: true
+      peer2:
+        eventSource: true
+      peer3:
+        eventSource: true
+      peer4:
+        eventSource: true
+      peer5:
+        eventSource: true
+      peer6:
+        eventSource: true
+      peer7:
+        eventSource: true
+      peer8:
+        eventSource: true
+      peer9:
+        eventSource: true
+
+    # chaincodes:
+    # - id: marbles
+    #   version: v1.0.0
+    #   targetPeers:
+    #   - peer0.org1.example.com
+    #   - peer1.org1.example.com
+    #   - peer0.org2.example.com
+    #   - peer1.org2.example.com
+    #   language: node
+    #   path: src/fabric/samples/marbles/node
+    #   metadataPath: src/fabric/samples/marbles/node/metadata
+    #   init: []
+    #   function: init
+
+    # chaincodes:
+    # - id: simple
+    #   version: v1.0.0
+    #   targetPeers:
+    #   - peer0.org1.example.com
+    #   - peer1.org1.example.com
+    #   - peer0.org2.example.com
+    #   - peer1.org2.example.com
+    #   language: node
+    #   path: src/fabric/scenario/simple/node
+    #   init: []
+    #   function: init
+
+    chaincodes:
+    - id: smallbank
+      version: v0
+      targetPeers:
+      - peer0
+      - peer1
+      - peer2
+      - peer3
+      - peer4
+      - peer5
+      - peer6
+      - peer7
+      - peer8
+      - peer9
+      # language: node
+      language: golang
+      path: fabric/scenario/smallbank/go
+      # init: []
+      # function: init
+
+      endorsement-policy:
+        identities:
+        - role:
+            name: member
+            mspId: Org1MSP
+        policy:
+          1-of:
+          - signed-by: 0
+
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+    - peer0
+    - peer1
+    - peer2
+    - peer3
+    - peer4
+    - peer5
+    - peer6
+    - peer7
+    - peer8
+    - peer9
+    adminPrivateKey:
+      path: ./crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
+    signedCert:
+      path: ./crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
+
+
+orderers:
+  orderer:
+    url: grpc://orderer:7050
+    # grpcOptions:
+      # ssl-target-name-override: orderer.example.com
+      # grpc-max-send-message-length: 15
+    # tlsCACerts:
+    #   path: ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+
+peers:
+  peer0:
+    url: grpc://peer0:7051
+    grpcOptions:
+      # ssl-target-name-override: peer0.org1.example.com
+      grpc.keepalive_time_ms: 600000
+    # tlsCACerts:
+    #   path: ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+
+  peer1:
+    url: grpc://peer1:7051
+    grpcOptions:
+      # ssl-target-name-override: peer1.org1.example.com
+      grpc.keepalive_time_ms: 600000
+    # tlsCACerts:
+      # path: ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+
+  peer2:
+    url: grpc://peer2:7051
+    grpcOptions:
+      # ssl-target-name-override: peer0.org2.example.com
+      grpc.keepalive_time_ms: 600000
+    # tlsCACerts:
+      # path: ./crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+
+  peer3:
+    url: grpc://peer3:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer4:
+    url: grpc://peer4:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer5:
+    url: grpc://peer5:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer6:
+    url: grpc://peer6:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer7:
+    url: grpc://peer7:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer8:
+    url: grpc://peer8:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000
+
+  peer9:
+    url: grpc://peer9:7051
+    grpcOptions:
+      grpc.keepalive_time_ms: 600000

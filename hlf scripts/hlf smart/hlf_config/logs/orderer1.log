@@ -1,0 +1,358 @@
+2020-07-15 13:02:43.849 [main] INFO  bft.BFTNode - Starting up ordering node with system channel testchainid
+2020-07-15 13:02:43.851 [main] INFO  bft.BFTNode - This is the signature algorithm: SHA256withECDSA
+2020-07-15 13:02:43.851 [main] INFO  bft.BFTNode - This is the hash algorithm: SHA2
+2020-07-15 13:02:43.857 [main] INFO  b.r.ServerViewController - Creating current view from configuration file
+2020-07-15 13:02:43.910 [main] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 0
+2020-07-15 13:02:44.022 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - ID = 1
+2020-07-15 13:02:44.022 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - N = 4
+2020-07-15 13:02:44.022 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - F = 1
+2020-07-15 13:02:44.022 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Port = 11000
+2020-07-15 13:02:44.022 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - requestTimeout = 5000
+2020-07-15 13:02:44.022 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - maxBatch = 400
+2020-07-15 13:02:44.023 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Binded replica to IP address 10.0.1.218
+2020-07-15 13:02:44.023 [main] INFO  bftsmart.tom.ServiceReplica - In current view: ID:0; F:1; Processes:0(0.node.bft/10.0.1.217:11000),1(1.node.bft/10.0.1.218:11000),2(2.node.bft/10.0.1.215:11000),3(3.node.bft/10.0.1.219:11000),
+2020-07-15 13:02:44.232 [Thread-1] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 3
+2020-07-15 13:02:48.359 [Thread-1] INFO  b.c.server.ServerConnection - Diffie-Hellman complete with 2
+2020-07-15 13:02:49.052 [Server CS] INFO  b.s.strategy.StandardStateManager - Replica state is up to date
+2020-07-15 13:02:49.053 [Delivery Thread] INFO  bftsmart.tom.core.DeliveryThread - Retrieving State
+2020-07-15 13:02:49.053 [Delivery Thread] INFO  bftsmart.tom.core.DeliveryThread - Ready to process operations
+2020-07-15 13:02:51.715 [nioEventLoopGroup-3-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:52.642 [nioEventLoopGroup-3-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:52.888 [nioEventLoopGroup-3-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:52.904 [nioEventLoopGroup-3-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:52.945 [nioEventLoopGroup-3-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:52.991 [nioEventLoopGroup-3-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.006 [nioEventLoopGroup-3-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.028 [nioEventLoopGroup-3-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.036 [nioEventLoopGroup-3-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.044 [nioEventLoopGroup-3-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.050 [nioEventLoopGroup-3-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.058 [nioEventLoopGroup-3-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+2020-07-15 13:02:53.106 [Delivery Thread] INFO  bft.BFTNode - Creating channel testchainid
+2020-07-15 13:02:53.257 [Delivery Thread] INFO  bft.util.BlockCutter - Updated PreferredMaxBytes: {testchainid=524288}
+2020-07-15 13:02:53.257 [Delivery Thread] INFO  bft.util.BlockCutter - Updated MaxMessageCount: {testchainid=10}
+2020-07-15 13:02:53.257 [Delivery Thread] INFO  bft.BFTNode - New channel ID: testchainid
+2020-07-15 13:02:53.257 [Delivery Thread] INFO  bft.BFTNode - Genesis header number: 0
+2020-07-15 13:02:53.258 [Delivery Thread] INFO  bft.BFTNode - Genesis header data hash: 59a9e46f4826461d0207293a1167e787cb4dad4d972dd41e3cec48e5bb21800c
+2020-07-15 13:02:53.992 [nioEventLoopGroup-3-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.005 [nioEventLoopGroup-3-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.031 [nioEventLoopGroup-3-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.042 [nioEventLoopGroup-3-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.052 [nioEventLoopGroup-3-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.092 [nioEventLoopGroup-3-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.099 [nioEventLoopGroup-3-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.104 [nioEventLoopGroup-3-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.110 [nioEventLoopGroup-3-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:54.115 [nioEventLoopGroup-3-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=1
+2020-07-15 13:02:55.086 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:02:56.142 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:02:57.090 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:02:58.148 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:02:59.096 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:00.151 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:01.103 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:02.157 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:03.163 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:04.160 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:05.110 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:06.168 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:07.120 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:08.169 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:09.117 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:10.172 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:11.122 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:12.176 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:13.125 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:14.181 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:15.131 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:16.187 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:17.135 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:18.190 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:19.137 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:19.993 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/ChannelCreationPolicy
+2020-07-15 13:03:19.996 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 1 sub-policies from /Channel/Application/ChannelCreationPolicy
+2020-07-15 13:03:19.996 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/IBM/Admins
+2020-07-15 13:03:19.996 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Application/IBM/Admins
+2020-07-15 13:03:20.013 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/IBM/Admins succeeded
+2020-07-15 13:03:20.013 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/ChannelCreationPolicy succeeded
+2020-07-15 13:03:20.013 [Delivery Thread] INFO  bft.BFTNode - Orderer transaction envelope for system channel is valid, generating genesis with readset and writeset for channel mychannel
+2020-07-15 13:03:20.037 [Delivery Thread] INFO  bft.BFTNode - Creating channel mychannel
+2020-07-15 13:03:20.063 [Delivery Thread] INFO  bft.util.BlockCutter - Updated PreferredMaxBytes: {mychannel=524288, testchainid=524288}
+2020-07-15 13:03:20.063 [Delivery Thread] INFO  bft.util.BlockCutter - Updated MaxMessageCount: {mychannel=10, testchainid=10}
+2020-07-15 13:03:20.063 [Delivery Thread] INFO  bft.BFTNode - New channel ID: mychannel
+2020-07-15 13:03:20.063 [Delivery Thread] INFO  bft.BFTNode - Genesis header number: 0
+2020-07-15 13:03:20.063 [Delivery Thread] INFO  bft.BFTNode - Genesis header data hash: 9bbd1b26ae92d527f1c05075be9027d90b5f647a62512dd6eaa4ae1b6839ba0d
+2020-07-15 13:03:21.148 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:21.959 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:22.123 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:22.127 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:23.092 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/IBM/Admins
+2020-07-15 13:03:23.093 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Application/IBM/Admins
+2020-07-15 13:03:23.097 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/IBM/Admins succeeded
+2020-07-15 13:03:23.097 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Writers
+2020-07-15 13:03:23.098 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 2 sub-policies from /Channel/Writers
+2020-07-15 13:03:23.098 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/Writers
+2020-07-15 13:03:23.098 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 2 sub-policies from /Channel/Orderer/Writers
+2020-07-15 13:03:23.099 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/OrderingNodes/Writers
+2020-07-15 13:03:23.099 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 2 signature policies from /Channel/Orderer/OrderingNodes/Writers
+2020-07-15 13:03:23.101 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/OrderingNodes/Writers failed: Not enough signature policies satisfied for /Channel/Orderer/OrderingNodes/Writers. (Needed 2 got 0)
+2020-07-15 13:03:23.101 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/Frontends/Writers
+2020-07-15 13:03:23.102 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Orderer/Frontends/Writers
+2020-07-15 13:03:23.102 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/Frontends/Writers failed: Not enough signature policies satisfied for /Channel/Orderer/Frontends/Writers. (Needed 1 got 0)
+2020-07-15 13:03:23.103 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/Writers failed: Not enough sub-policies satisfied for /Channel/Orderer/Writers. (Needed 1 got 0)
+2020-07-15 13:03:23.103 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/Writers
+2020-07-15 13:03:23.103 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 1 sub-policies from /Channel/Application/Writers
+2020-07-15 13:03:23.103 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/IBM/Writers
+2020-07-15 13:03:23.104 [Delivery Thread] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Application/IBM/Writers
+2020-07-15 13:03:23.108 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/IBM/Writers succeeded
+2020-07-15 13:03:23.108 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/Writers succeeded
+2020-07-15 13:03:23.108 [Delivery Thread] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Writers succeeded
+2020-07-15 13:03:23.108 [Delivery Thread] INFO  bft.BFTNode - Reconfiguration envelope for channel mychannel is valid, generating configuration with readset and writeset
+2020-07-15 13:03:23.113 [Delivery Thread] INFO  bft.BFTNode - Updating state for channel mychannel
+2020-07-15 13:03:23.142 [Delivery Thread] INFO  bft.util.BlockCutter - Updated PreferredMaxBytes: {mychannel=524288, testchainid=524288}
+2020-07-15 13:03:23.142 [Delivery Thread] INFO  bft.util.BlockCutter - Updated MaxMessageCount: {mychannel=10, testchainid=10}
+2020-07-15 13:03:23.142 [Delivery Thread] INFO  bft.BFTNode - Latest block with config update for mychannel: #1
+2020-07-15 13:03:23.150 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:23.965 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:24.127 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:25.095 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:25.154 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:25.966 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:26.128 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:27.095 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:27.158 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:27.970 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:28.132 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:29.099 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:29.162 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:29.972 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:30.136 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:31.101 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:31.166 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:31.977 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:32.138 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:33.105 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:33.169 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:33.983 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:34.144 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:35.108 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:35.173 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:35.983 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:36.146 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:37.111 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:37.175 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:37.987 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:38.150 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:38.151 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Writers
+2020-07-15 13:03:38.152 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 2 sub-policies from /Channel/Writers
+2020-07-15 13:03:38.152 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/Writers
+2020-07-15 13:03:38.152 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 2 sub-policies from /Channel/Orderer/Writers
+2020-07-15 13:03:38.152 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/OrderingNodes/Writers
+2020-07-15 13:03:38.153 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 2 signature policies from /Channel/Orderer/OrderingNodes/Writers
+2020-07-15 13:03:38.155 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/OrderingNodes/Writers failed: Not enough signature policies satisfied for /Channel/Orderer/OrderingNodes/Writers. (Needed 2 got 0)
+2020-07-15 13:03:38.155 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/Frontends/Writers
+2020-07-15 13:03:38.155 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Orderer/Frontends/Writers
+2020-07-15 13:03:38.156 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/Frontends/Writers failed: Not enough signature policies satisfied for /Channel/Orderer/Frontends/Writers. (Needed 1 got 0)
+2020-07-15 13:03:38.156 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/Writers failed: Not enough sub-policies satisfied for /Channel/Orderer/Writers. (Needed 1 got 0)
+2020-07-15 13:03:38.156 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/Writers
+2020-07-15 13:03:38.157 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 1 sub-policies from /Channel/Application/Writers
+2020-07-15 13:03:38.157 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/IBM/Writers
+2020-07-15 13:03:38.157 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Application/IBM/Writers
+2020-07-15 13:03:38.162 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/IBM/Writers succeeded
+2020-07-15 13:03:38.162 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/Writers succeeded
+2020-07-15 13:03:38.162 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Writers succeeded
+2020-07-15 13:03:39.182 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:39.643 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:39.992 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:40.153 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:41.184 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:41.646 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:41.994 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:42.154 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:43.187 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:43.649 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:43.998 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:44.157 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:45.191 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:45.652 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:46.001 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:46.160 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:47.194 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:47.656 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:48.004 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:48.165 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:49.197 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:50.007 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:50.167 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:50.168 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Writers
+2020-07-15 13:03:50.169 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 2 sub-policies from /Channel/Writers
+2020-07-15 13:03:50.169 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/Writers
+2020-07-15 13:03:50.170 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 2 sub-policies from /Channel/Orderer/Writers
+2020-07-15 13:03:50.170 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/OrderingNodes/Writers
+2020-07-15 13:03:50.170 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 2 signature policies from /Channel/Orderer/OrderingNodes/Writers
+2020-07-15 13:03:50.172 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/OrderingNodes/Writers failed: Not enough signature policies satisfied for /Channel/Orderer/OrderingNodes/Writers. (Needed 2 got 0)
+2020-07-15 13:03:50.173 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Orderer/Frontends/Writers
+2020-07-15 13:03:50.173 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Orderer/Frontends/Writers
+2020-07-15 13:03:50.174 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/Frontends/Writers failed: Not enough signature policies satisfied for /Channel/Orderer/Frontends/Writers. (Needed 1 got 0)
+2020-07-15 13:03:50.174 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Orderer/Writers failed: Not enough sub-policies satisfied for /Channel/Orderer/Writers. (Needed 1 got 0)
+2020-07-15 13:03:50.174 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/Writers
+2020-07-15 13:03:50.174 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 1 sub-policies from /Channel/Application/Writers
+2020-07-15 13:03:50.174 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating policy /Channel/Application/IBM/Writers
+2020-07-15 13:03:50.175 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluating 1 signature policies from /Channel/Application/IBM/Writers
+2020-07-15 13:03:50.180 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/IBM/Writers succeeded
+2020-07-15 13:03:50.180 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Application/Writers succeeded
+2020-07-15 13:03:50.180 [ForkJoinPool-1-worker-9] INFO  bft.util.MSPManager - Evaluation of policy /Channel/Writers succeeded
+2020-07-15 13:03:51.192 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:51.201 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:52.010 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:52.171 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:53.195 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:53.204 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:54.013 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:54.174 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:55.197 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:55.206 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:56.016 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:56.178 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:57.201 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:57.210 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:58.019 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:03:58.180 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:59.204 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:03:59.213 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:00.029 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:00.183 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:01.207 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:01.216 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:02.026 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:02.186 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:03.209 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:03.219 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:04.029 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:04.189 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:05.213 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:05.223 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:06.034 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:06.191 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:07.215 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:07.225 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:08.035 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:08.193 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:09.219 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:09.231 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:10.041 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:10.198 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:11.222 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:11.235 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:12.042 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:12.200 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:13.225 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:13.236 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:14.045 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:14.204 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:15.228 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:15.238 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:16.048 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:16.206 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:17.231 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:17.241 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:18.051 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:18.210 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:19.234 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:19.243 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:20.054 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:20.212 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:21.236 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:21.245 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:22.057 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:22.216 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:23.239 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:23.247 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:24.061 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:24.218 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:25.242 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:25.249 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:26.064 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:26.221 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:27.245 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:27.251 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:28.066 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:28.224 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:29.248 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:29.254 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:30.069 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:30.227 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:31.265 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:31.267 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:32.073 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:32.231 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:33.254 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:33.260 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:34.075 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:34.234 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:35.257 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:35.264 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:36.079 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:36.237 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:37.261 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:37.266 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:38.082 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:38.240 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:39.264 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:39.269 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:40.085 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:40.243 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:41.267 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:41.277 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:42.088 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:42.247 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:43.269 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:43.276 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:44.091 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:44.250 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:45.273 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:45.279 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:46.093 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:46.252 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:47.275 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:47.283 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:48.096 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:48.255 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:49.291 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:49.294 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:50.099 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:50.258 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:51.282 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:51.290 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:52.104 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:52.261 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:53.285 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:53.292 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:54.106 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:54.264 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:55.287 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:55.294 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:56.108 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:56.266 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:57.290 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:57.297 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:58.109 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:04:58.268 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:59.291 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:04:59.300 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:00.112 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:00.270 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:01.294 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:01.303 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:02.115 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:02.273 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:03.297 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:03.306 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:04.117 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:04.276 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:05.299 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:05.309 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:06.120 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid
+2020-07-15 13:05:06.278 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:07.301 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel mychannel
+2020-07-15 13:05:07.311 [Delivery Thread] INFO  bft.BFTNode - Purging blockcutter for channel testchainid

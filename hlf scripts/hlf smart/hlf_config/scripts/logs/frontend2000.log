@@ -1,0 +1,876 @@
+[34m2020-10-12 07:50:59.826 UTC [localconfig] completeInitialization -> INFO 001[0m Kafka.Version unset, setting to 0.10.2.0
+[34m2020-10-12 07:50:59.862 UTC [orderer/common/server] prettyPrintStruct -> INFO 002[0m Orderer config values:
+	General.LedgerType = "ram"
+	General.ListenAddress = "0.0.0.0"
+	General.ListenPort = 7050
+	General.TLS.Enabled = false
+	General.TLS.PrivateKey = "/bft-config/fabric/tls/server.key"
+	General.TLS.Certificate = "/bft-config/fabric/tls/server.crt"
+	General.TLS.RootCAs = [/bft-config/fabric/tls/ca.crt]
+	General.TLS.ClientAuthRequired = false
+	General.TLS.ClientRootCAs = []
+	General.Keepalive.ServerMinInterval = 1m0s
+	General.Keepalive.ServerInterval = 2h0m0s
+	General.Keepalive.ServerTimeout = 20s
+	General.GenesisMethod = "file"
+	General.GenesisProfile = "SampleInsecureSolo"
+	General.SystemChannel = "test-system-channel-name"
+	General.GenesisFile = "/bft-config/genesisblock"
+	General.Profile.Enabled = false
+	General.Profile.Address = "0.0.0.0:6060"
+	General.LogLevel = "info"
+	General.LogFormat = "%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}"
+	General.LocalMSPDir = "/bft-config/fabric/msp"
+	General.LocalMSPID = "FrontendsMSP"
+	General.BCCSP.ProviderName = "SW"
+	General.BCCSP.SwOpts.SecLevel = 256
+	General.BCCSP.SwOpts.HashFamily = "SHA2"
+	General.BCCSP.SwOpts.Ephemeral = false
+	General.BCCSP.SwOpts.FileKeystore.KeyStorePath = "/bft-config/fabric/msp/keystore"
+	General.BCCSP.SwOpts.DummyKeystore =
+	General.BCCSP.PluginOpts =
+	General.Authentication.TimeWindow = 15m0s
+	FileLedger.Location = "/var/hyperledger/production/orderer"
+	FileLedger.Prefix = "hyperledger-fabric-ordererledger"
+	RAMLedger.HistorySize = 1000
+	Kafka.Retry.ShortInterval = 5s
+	Kafka.Retry.ShortTotal = 10m0s
+	Kafka.Retry.LongInterval = 5m0s
+	Kafka.Retry.LongTotal = 12h0m0s
+	Kafka.Retry.NetworkTimeouts.DialTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.ReadTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.WriteTimeout = 10s
+	Kafka.Retry.Metadata.RetryMax = 3
+	Kafka.Retry.Metadata.RetryBackoff = 250ms
+	Kafka.Retry.Producer.RetryMax = 3
+	Kafka.Retry.Producer.RetryBackoff = 100ms
+	Kafka.Retry.Consumer.RetryBackoff = 2s
+	Kafka.Verbose = false
+	Kafka.Version = 0.10.2.0
+	Kafka.TLS.Enabled = false
+	Kafka.TLS.PrivateKey = ""
+	Kafka.TLS.Certificate = ""
+	Kafka.TLS.RootCAs = []
+	Kafka.TLS.ClientAuthRequired = false
+	Kafka.TLS.ClientRootCAs = []
+	Kafka.SASLPlain.Enabled = false
+	Kafka.SASLPlain.User = ""
+	Kafka.SASLPlain.Password = ""
+	Kafka.Topic.ReplicationFactor = 3
+	BFTsmart.ConnectionPoolSize = 10
+	BFTsmart.RecvPort = 9999
+	Debug.BroadcastTraceDir = ""
+	Debug.DeliverTraceDir = ""
+2020-10-12 07:50:59.869 UTC [orderer/bftsmart] newChain -> INFO 001[0m Creating new bftsmart chain with ID 'testchainid'
+[34m2020-10-12 07:50:59.869 UTC [orderer/commmon/multichannel] NewRegistrar -> INFO 003[0m Starting system channel 'testchainid' with genesis block hash 30e744fb3737db6edd7ff5b2b586d20d2ada139b85e4f9a0ef9d8839065a5e04 and orderer type bftsmart
+2020-10-12 07:50:59.869 UTC [orderer/bftsmart] Start -> INFO 002[0m Starting new bftsmart chain with ID 'testchainid'
+2020-10-12 07:50:59.869 UTC [orderer/bftsmart] Start -> INFO 003[0m Waiting for java component to be ready
+2020-10-12 07:51:04.063 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.071 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.073 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.074 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.075 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.076 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.078 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.079 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.082 [main] INFO  bft.BFTProxy - Creating UNIX socket...
+2020-10-12 07:51:04.104 [main] INFO  bft.BFTProxy - Waiting for local connections and parameters...
+2020-10-12 07:51:04.371 UTC [orderer/bftsmart] Start -> INFO 004[0m Created connection pool to java component
+[34m2020-10-12 07:51:04.373 UTC [orderer/common/server] Start -> INFO 004[0m Starting orderer:
+ Version: 1.3.1
+ Commit SHA: c76a173
+ Go version: go1.10.3
+ OS/Arch: linux/amd64
+ Experimental features: false
+[34m2020-10-12 07:51:04.373 UTC [orderer/common/server] Start -> INFO 005[0m Beginning to serve requests
+2020-10-12 07:51:04.406 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.407 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.410 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.410 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.412 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.412 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.415 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.416 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.433 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.433 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.435 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.436 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.437 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.438 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.439 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.440 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.478 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.478 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.481 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.481 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.482 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.482 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.485 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.486 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.498 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.499 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.500 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.501 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.560 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.561 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.563 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.565 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.577 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.578 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.579 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.580 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.581 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.582 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.583 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.584 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.609 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.610 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.611 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.612 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.613 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.614 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.615 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.616 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.628 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.629 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.630 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.631 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.632 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.633 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.634 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.635 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.646 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.646 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.647 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.648 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.649 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.650 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.651 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.652 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.663 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.664 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.665 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.666 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.667 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.668 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.668 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.670 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+2020-10-12 07:51:04.684 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:04.684 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 0
+2020-10-12 07:51:04.685 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:04.685 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 1
+2020-10-12 07:51:04.686 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:04.687 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 2
+2020-10-12 07:51:04.687 [main] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - Connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:04.688 [main] ERROR b.c.c.n.NettyClientServerCommunicationSystemClientSide - Impossible to connect to 3
+Exception in thread "main" java.lang.RuntimeException: Impossible to connect to servers!
+	at bftsmart.communication.client.netty.NettyClientServerCommunicationSystemClientSide.send(NettyClientServerCommunicationSystemClientSide.java:397)
+	at bftsmart.tom.TOMSender.sendMessageToTargets(TOMSender.java:134)
+	at bftsmart.tom.AsynchServiceProxy.invokeAsynch(AsynchServiceProxy.java:233)
+	at bftsmart.tom.AsynchServiceProxy.invokeAsynchRequest(AsynchServiceProxy.java:98)
+	at bftsmart.tom.AsynchServiceProxy.invokeAsynchRequest(AsynchServiceProxy.java:86)
+	at bft.BFTProxy.main(BFTProxy.java:158)
+2020-10-12 07:51:14.083 [nioEventLoopGroup-2-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.085 [nioEventLoopGroup-2-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.087 [nioEventLoopGroup-2-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.089 [nioEventLoopGroup-2-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.415 [nioEventLoopGroup-3-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.418 [nioEventLoopGroup-3-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.423 [nioEventLoopGroup-3-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.424 [nioEventLoopGroup-3-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.444 [nioEventLoopGroup-4-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.445 [nioEventLoopGroup-4-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.449 [nioEventLoopGroup-4-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.450 [nioEventLoopGroup-4-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.489 [nioEventLoopGroup-5-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.491 [nioEventLoopGroup-5-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.492 [nioEventLoopGroup-5-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.496 [nioEventLoopGroup-5-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.508 [nioEventLoopGroup-6-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.509 [nioEventLoopGroup-6-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.571 [nioEventLoopGroup-6-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.573 [nioEventLoopGroup-6-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.589 [nioEventLoopGroup-7-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.590 [nioEventLoopGroup-7-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.593 [nioEventLoopGroup-7-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.595 [nioEventLoopGroup-7-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.621 [nioEventLoopGroup-8-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.623 [nioEventLoopGroup-8-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.624 [nioEventLoopGroup-8-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.626 [nioEventLoopGroup-8-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.636 [nioEventLoopGroup-9-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.642 [nioEventLoopGroup-9-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.643 [nioEventLoopGroup-9-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.644 [nioEventLoopGroup-9-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.657 [nioEventLoopGroup-10-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.659 [nioEventLoopGroup-10-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.661 [nioEventLoopGroup-10-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.663 [nioEventLoopGroup-10-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.674 [nioEventLoopGroup-11-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.677 [nioEventLoopGroup-11-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.678 [nioEventLoopGroup-11-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:14.679 [nioEventLoopGroup-11-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.694 [nioEventLoopGroup-12-1] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:14.696 [nioEventLoopGroup-12-2] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:14.697 [nioEventLoopGroup-12-3] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:14.699 [nioEventLoopGroup-12-4] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.115 [nioEventLoopGroup-2-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.116 [nioEventLoopGroup-2-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.163 [nioEventLoopGroup-2-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.167 [nioEventLoopGroup-2-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.427 [nioEventLoopGroup-3-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.429 [nioEventLoopGroup-3-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.435 [nioEventLoopGroup-3-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.436 [nioEventLoopGroup-3-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.452 [nioEventLoopGroup-4-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.457 [nioEventLoopGroup-4-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.460 [nioEventLoopGroup-4-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.462 [nioEventLoopGroup-4-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.500 [nioEventLoopGroup-5-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.503 [nioEventLoopGroup-5-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.504 [nioEventLoopGroup-5-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.508 [nioEventLoopGroup-5-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.520 [nioEventLoopGroup-6-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.521 [nioEventLoopGroup-6-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.583 [nioEventLoopGroup-6-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.584 [nioEventLoopGroup-6-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.600 [nioEventLoopGroup-7-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.601 [nioEventLoopGroup-7-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.604 [nioEventLoopGroup-7-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.606 [nioEventLoopGroup-7-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.632 [nioEventLoopGroup-8-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.633 [nioEventLoopGroup-8-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.634 [nioEventLoopGroup-8-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.636 [nioEventLoopGroup-8-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.648 [nioEventLoopGroup-9-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.652 [nioEventLoopGroup-9-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.653 [nioEventLoopGroup-9-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.655 [nioEventLoopGroup-9-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.668 [nioEventLoopGroup-10-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.669 [nioEventLoopGroup-10-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.670 [nioEventLoopGroup-10-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.672 [nioEventLoopGroup-10-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.686 [nioEventLoopGroup-11-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.688 [nioEventLoopGroup-11-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.689 [nioEventLoopGroup-11-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:24.691 [nioEventLoopGroup-11-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.706 [nioEventLoopGroup-12-5] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:24.708 [nioEventLoopGroup-12-6] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:24.708 [nioEventLoopGroup-12-8] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:24.709 [nioEventLoopGroup-12-7] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.145 [nioEventLoopGroup-2-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.146 [nioEventLoopGroup-2-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.193 [nioEventLoopGroup-2-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.198 [nioEventLoopGroup-2-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.438 [nioEventLoopGroup-3-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.440 [nioEventLoopGroup-3-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.444 [nioEventLoopGroup-3-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.446 [nioEventLoopGroup-3-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.464 [nioEventLoopGroup-4-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.468 [nioEventLoopGroup-4-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.471 [nioEventLoopGroup-4-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.473 [nioEventLoopGroup-4-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.511 [nioEventLoopGroup-5-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.514 [nioEventLoopGroup-5-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.515 [nioEventLoopGroup-5-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.518 [nioEventLoopGroup-5-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.531 [nioEventLoopGroup-6-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.532 [nioEventLoopGroup-6-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.594 [nioEventLoopGroup-6-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.595 [nioEventLoopGroup-6-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.611 [nioEventLoopGroup-7-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.612 [nioEventLoopGroup-7-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.615 [nioEventLoopGroup-7-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.617 [nioEventLoopGroup-7-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.643 [nioEventLoopGroup-8-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.644 [nioEventLoopGroup-8-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.645 [nioEventLoopGroup-8-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.646 [nioEventLoopGroup-8-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.659 [nioEventLoopGroup-9-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.663 [nioEventLoopGroup-9-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.664 [nioEventLoopGroup-9-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.665 [nioEventLoopGroup-9-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.680 [nioEventLoopGroup-10-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.680 [nioEventLoopGroup-10-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.681 [nioEventLoopGroup-10-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.683 [nioEventLoopGroup-10-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.697 [nioEventLoopGroup-11-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.698 [nioEventLoopGroup-11-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.699 [nioEventLoopGroup-11-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.700 [nioEventLoopGroup-11-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:34.716 [nioEventLoopGroup-12-10] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:34.717 [nioEventLoopGroup-12-9] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:34.718 [nioEventLoopGroup-12-12] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:34.719 [nioEventLoopGroup-12-11] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.187 [nioEventLoopGroup-2-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.188 [nioEventLoopGroup-2-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.212 [nioEventLoopGroup-2-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.228 [nioEventLoopGroup-2-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.449 [nioEventLoopGroup-3-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.449 [nioEventLoopGroup-3-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.450 [nioEventLoopGroup-3-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.450 [nioEventLoopGroup-3-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.474 [nioEventLoopGroup-4-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.479 [nioEventLoopGroup-4-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.482 [nioEventLoopGroup-4-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.483 [nioEventLoopGroup-4-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.522 [nioEventLoopGroup-5-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.524 [nioEventLoopGroup-5-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.525 [nioEventLoopGroup-5-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.529 [nioEventLoopGroup-5-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.542 [nioEventLoopGroup-6-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.543 [nioEventLoopGroup-6-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.605 [nioEventLoopGroup-6-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.606 [nioEventLoopGroup-6-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.620 [nioEventLoopGroup-7-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.622 [nioEventLoopGroup-7-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.626 [nioEventLoopGroup-7-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.628 [nioEventLoopGroup-7-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.654 [nioEventLoopGroup-8-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.655 [nioEventLoopGroup-8-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.656 [nioEventLoopGroup-8-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.657 [nioEventLoopGroup-8-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.668 [nioEventLoopGroup-9-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.675 [nioEventLoopGroup-9-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.675 [nioEventLoopGroup-9-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.676 [nioEventLoopGroup-9-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.690 [nioEventLoopGroup-10-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.691 [nioEventLoopGroup-10-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.692 [nioEventLoopGroup-10-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.693 [nioEventLoopGroup-10-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.708 [nioEventLoopGroup-11-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.709 [nioEventLoopGroup-11-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.710 [nioEventLoopGroup-11-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:44.710 [nioEventLoopGroup-11-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.727 [nioEventLoopGroup-12-13] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:44.728 [nioEventLoopGroup-12-14] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:44.729 [nioEventLoopGroup-12-15] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:44.731 [nioEventLoopGroup-12-16] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.206 [nioEventLoopGroup-2-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.216 [nioEventLoopGroup-2-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.225 [nioEventLoopGroup-2-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.269 [nioEventLoopGroup-2-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.458 [nioEventLoopGroup-3-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.460 [nioEventLoopGroup-3-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.460 [nioEventLoopGroup-3-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.461 [nioEventLoopGroup-3-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.486 [nioEventLoopGroup-4-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.487 [nioEventLoopGroup-4-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.487 [nioEventLoopGroup-4-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.494 [nioEventLoopGroup-4-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.533 [nioEventLoopGroup-5-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.535 [nioEventLoopGroup-5-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.536 [nioEventLoopGroup-5-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.536 [nioEventLoopGroup-5-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.553 [nioEventLoopGroup-6-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.554 [nioEventLoopGroup-6-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.616 [nioEventLoopGroup-6-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.617 [nioEventLoopGroup-6-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.631 [nioEventLoopGroup-7-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.633 [nioEventLoopGroup-7-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.637 [nioEventLoopGroup-7-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.639 [nioEventLoopGroup-7-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.665 [nioEventLoopGroup-8-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.666 [nioEventLoopGroup-8-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.667 [nioEventLoopGroup-8-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.668 [nioEventLoopGroup-8-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.673 [nioEventLoopGroup-9-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.684 [nioEventLoopGroup-9-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.684 [nioEventLoopGroup-9-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.687 [nioEventLoopGroup-9-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.702 [nioEventLoopGroup-10-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.703 [nioEventLoopGroup-10-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.704 [nioEventLoopGroup-10-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.704 [nioEventLoopGroup-10-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.719 [nioEventLoopGroup-11-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.720 [nioEventLoopGroup-11-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.721 [nioEventLoopGroup-11-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:51:54.721 [nioEventLoopGroup-11-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.738 [nioEventLoopGroup-12-17] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:51:54.739 [nioEventLoopGroup-12-18] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:51:54.740 [nioEventLoopGroup-12-19] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:51:54.741 [nioEventLoopGroup-12-20] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.213 [nioEventLoopGroup-2-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.244 [nioEventLoopGroup-2-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.252 [nioEventLoopGroup-2-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.308 [nioEventLoopGroup-2-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.470 [nioEventLoopGroup-3-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.471 [nioEventLoopGroup-3-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.471 [nioEventLoopGroup-3-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.473 [nioEventLoopGroup-3-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.497 [nioEventLoopGroup-4-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.498 [nioEventLoopGroup-4-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.498 [nioEventLoopGroup-4-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.505 [nioEventLoopGroup-4-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.541 [nioEventLoopGroup-5-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.542 [nioEventLoopGroup-5-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.545 [nioEventLoopGroup-5-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.546 [nioEventLoopGroup-5-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.564 [nioEventLoopGroup-6-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.565 [nioEventLoopGroup-6-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.627 [nioEventLoopGroup-6-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.628 [nioEventLoopGroup-6-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.642 [nioEventLoopGroup-7-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.644 [nioEventLoopGroup-7-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.645 [nioEventLoopGroup-7-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.646 [nioEventLoopGroup-7-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.672 [nioEventLoopGroup-8-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.677 [nioEventLoopGroup-8-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.678 [nioEventLoopGroup-8-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.679 [nioEventLoopGroup-8-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.683 [nioEventLoopGroup-9-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.692 [nioEventLoopGroup-9-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.695 [nioEventLoopGroup-9-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.698 [nioEventLoopGroup-9-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.713 [nioEventLoopGroup-10-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.714 [nioEventLoopGroup-10-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.715 [nioEventLoopGroup-10-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.716 [nioEventLoopGroup-10-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.729 [nioEventLoopGroup-11-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.730 [nioEventLoopGroup-11-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.731 [nioEventLoopGroup-11-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:04.732 [nioEventLoopGroup-11-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.749 [nioEventLoopGroup-12-21] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:04.750 [nioEventLoopGroup-12-22] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:04.750 [nioEventLoopGroup-12-24] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:04.751 [nioEventLoopGroup-12-23] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.244 [nioEventLoopGroup-2-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.261 [nioEventLoopGroup-2-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.415 [nioEventLoopGroup-2-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.480 [nioEventLoopGroup-3-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.481 [nioEventLoopGroup-3-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.484 [nioEventLoopGroup-3-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.508 [nioEventLoopGroup-4-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.509 [nioEventLoopGroup-4-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.516 [nioEventLoopGroup-4-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.548 [nioEventLoopGroup-5-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.552 [nioEventLoopGroup-5-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.556 [nioEventLoopGroup-5-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.575 [nioEventLoopGroup-6-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.576 [nioEventLoopGroup-6-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.639 [nioEventLoopGroup-6-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.644 [nioEventLoopGroup-7-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.655 [nioEventLoopGroup-7-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.656 [nioEventLoopGroup-7-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.683 [nioEventLoopGroup-8-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.688 [nioEventLoopGroup-8-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.690 [nioEventLoopGroup-8-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.690 [nioEventLoopGroup-9-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.703 [nioEventLoopGroup-9-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.708 [nioEventLoopGroup-9-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.724 [nioEventLoopGroup-10-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.726 [nioEventLoopGroup-10-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.727 [nioEventLoopGroup-10-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.739 [nioEventLoopGroup-11-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.740 [nioEventLoopGroup-11-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.741 [nioEventLoopGroup-11-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.760 [nioEventLoopGroup-12-25] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:14.761 [nioEventLoopGroup-12-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:14.761 [nioEventLoopGroup-12-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:14.788 [nioEventLoopGroup-4-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.790 [nioEventLoopGroup-12-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.792 [nioEventLoopGroup-2-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.796 [nioEventLoopGroup-5-28] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.798 [nioEventLoopGroup-8-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.798 [nioEventLoopGroup-11-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.798 [nioEventLoopGroup-6-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.798 [nioEventLoopGroup-7-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.799 [nioEventLoopGroup-9-27] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.799 [nioEventLoopGroup-10-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:14.799 [nioEventLoopGroup-3-26] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.276 [nioEventLoopGroup-2-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.363 [nioEventLoopGroup-2-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.461 [nioEventLoopGroup-2-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.491 [nioEventLoopGroup-3-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.492 [nioEventLoopGroup-3-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.495 [nioEventLoopGroup-3-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.519 [nioEventLoopGroup-4-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.520 [nioEventLoopGroup-4-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.527 [nioEventLoopGroup-4-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.559 [nioEventLoopGroup-5-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.563 [nioEventLoopGroup-5-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.567 [nioEventLoopGroup-5-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.586 [nioEventLoopGroup-6-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.587 [nioEventLoopGroup-6-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.650 [nioEventLoopGroup-6-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.655 [nioEventLoopGroup-7-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.664 [nioEventLoopGroup-7-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.666 [nioEventLoopGroup-7-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.694 [nioEventLoopGroup-8-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.695 [nioEventLoopGroup-8-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.701 [nioEventLoopGroup-8-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.701 [nioEventLoopGroup-9-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.714 [nioEventLoopGroup-9-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.719 [nioEventLoopGroup-9-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.735 [nioEventLoopGroup-10-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.737 [nioEventLoopGroup-10-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.738 [nioEventLoopGroup-10-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.750 [nioEventLoopGroup-11-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.751 [nioEventLoopGroup-11-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.752 [nioEventLoopGroup-11-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.768 [nioEventLoopGroup-12-29] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:24.773 [nioEventLoopGroup-12-31] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:24.774 [nioEventLoopGroup-12-30] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:24.798 [nioEventLoopGroup-2-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.801 [nioEventLoopGroup-4-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.801 [nioEventLoopGroup-5-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.802 [nioEventLoopGroup-11-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.803 [nioEventLoopGroup-12-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.804 [nioEventLoopGroup-8-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.809 [nioEventLoopGroup-7-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.809 [nioEventLoopGroup-6-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.810 [nioEventLoopGroup-10-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.810 [nioEventLoopGroup-9-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:24.810 [nioEventLoopGroup-3-32] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.313 [nioEventLoopGroup-2-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.394 [nioEventLoopGroup-2-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.491 [nioEventLoopGroup-2-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.502 [nioEventLoopGroup-3-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.503 [nioEventLoopGroup-3-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.506 [nioEventLoopGroup-3-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.530 [nioEventLoopGroup-4-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.531 [nioEventLoopGroup-4-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.538 [nioEventLoopGroup-4-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.570 [nioEventLoopGroup-5-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.574 [nioEventLoopGroup-5-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.578 [nioEventLoopGroup-5-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.597 [nioEventLoopGroup-6-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.598 [nioEventLoopGroup-6-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.660 [nioEventLoopGroup-6-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.666 [nioEventLoopGroup-7-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.675 [nioEventLoopGroup-7-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.677 [nioEventLoopGroup-7-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.705 [nioEventLoopGroup-8-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.706 [nioEventLoopGroup-8-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.707 [nioEventLoopGroup-9-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.712 [nioEventLoopGroup-8-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.724 [nioEventLoopGroup-9-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.728 [nioEventLoopGroup-9-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.744 [nioEventLoopGroup-10-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.746 [nioEventLoopGroup-10-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.749 [nioEventLoopGroup-10-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.760 [nioEventLoopGroup-11-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.762 [nioEventLoopGroup-11-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.762 [nioEventLoopGroup-11-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.779 [nioEventLoopGroup-12-33] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:34.782 [nioEventLoopGroup-12-35] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:34.784 [nioEventLoopGroup-12-34] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:34.819 [nioEventLoopGroup-6-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.819 [nioEventLoopGroup-10-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.820 [nioEventLoopGroup-8-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.820 [nioEventLoopGroup-12-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.824 [nioEventLoopGroup-11-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.827 [nioEventLoopGroup-4-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.828 [nioEventLoopGroup-7-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.858 [nioEventLoopGroup-2-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.858 [nioEventLoopGroup-9-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.858 [nioEventLoopGroup-5-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:34.858 [nioEventLoopGroup-3-36] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.353 [nioEventLoopGroup-2-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.422 [nioEventLoopGroup-2-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.513 [nioEventLoopGroup-3-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.517 [nioEventLoopGroup-3-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.520 [nioEventLoopGroup-3-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.520 [nioEventLoopGroup-2-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.541 [nioEventLoopGroup-4-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.541 [nioEventLoopGroup-4-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.548 [nioEventLoopGroup-4-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.581 [nioEventLoopGroup-5-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.585 [nioEventLoopGroup-5-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.588 [nioEventLoopGroup-5-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.608 [nioEventLoopGroup-6-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.609 [nioEventLoopGroup-6-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.671 [nioEventLoopGroup-6-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.677 [nioEventLoopGroup-7-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.686 [nioEventLoopGroup-7-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.688 [nioEventLoopGroup-7-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.716 [nioEventLoopGroup-8-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.717 [nioEventLoopGroup-8-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.718 [nioEventLoopGroup-9-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.718 [nioEventLoopGroup-8-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.735 [nioEventLoopGroup-9-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.739 [nioEventLoopGroup-9-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.753 [nioEventLoopGroup-10-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.755 [nioEventLoopGroup-10-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.760 [nioEventLoopGroup-10-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.771 [nioEventLoopGroup-11-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.773 [nioEventLoopGroup-11-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.773 [nioEventLoopGroup-11-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.790 [nioEventLoopGroup-12-37] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:44.792 [nioEventLoopGroup-12-38] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:44.795 [nioEventLoopGroup-12-39] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:44.864 [nioEventLoopGroup-10-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.866 [nioEventLoopGroup-6-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.866 [nioEventLoopGroup-12-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.868 [nioEventLoopGroup-11-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.868 [nioEventLoopGroup-9-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.869 [nioEventLoopGroup-3-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.869 [nioEventLoopGroup-4-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.869 [nioEventLoopGroup-7-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.870 [nioEventLoopGroup-5-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.870 [nioEventLoopGroup-2-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:44.870 [nioEventLoopGroup-8-40] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.384 [nioEventLoopGroup-2-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.464 [nioEventLoopGroup-2-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.524 [nioEventLoopGroup-3-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.525 [nioEventLoopGroup-3-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.548 [nioEventLoopGroup-2-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.550 [nioEventLoopGroup-3-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.551 [nioEventLoopGroup-4-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.552 [nioEventLoopGroup-4-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.559 [nioEventLoopGroup-4-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.592 [nioEventLoopGroup-5-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.593 [nioEventLoopGroup-5-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.599 [nioEventLoopGroup-5-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.619 [nioEventLoopGroup-6-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.620 [nioEventLoopGroup-6-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.682 [nioEventLoopGroup-6-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.684 [nioEventLoopGroup-7-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.691 [nioEventLoopGroup-7-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.699 [nioEventLoopGroup-7-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.726 [nioEventLoopGroup-8-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.727 [nioEventLoopGroup-8-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.729 [nioEventLoopGroup-9-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.729 [nioEventLoopGroup-8-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.746 [nioEventLoopGroup-9-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.750 [nioEventLoopGroup-9-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.764 [nioEventLoopGroup-10-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.766 [nioEventLoopGroup-10-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.771 [nioEventLoopGroup-10-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.784 [nioEventLoopGroup-11-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.784 [nioEventLoopGroup-11-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.785 [nioEventLoopGroup-11-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.801 [nioEventLoopGroup-12-41] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:52:54.803 [nioEventLoopGroup-12-42] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:52:54.806 [nioEventLoopGroup-12-43] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:52:54.886 [nioEventLoopGroup-7-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.887 [nioEventLoopGroup-11-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.887 [nioEventLoopGroup-9-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.892 [nioEventLoopGroup-8-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.896 [nioEventLoopGroup-10-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.896 [nioEventLoopGroup-4-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.896 [nioEventLoopGroup-6-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.897 [nioEventLoopGroup-2-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.897 [nioEventLoopGroup-12-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.897 [nioEventLoopGroup-3-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:52:54.898 [nioEventLoopGroup-5-44] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.411 [nioEventLoopGroup-2-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.494 [nioEventLoopGroup-2-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.535 [nioEventLoopGroup-3-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.536 [nioEventLoopGroup-3-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.562 [nioEventLoopGroup-4-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.563 [nioEventLoopGroup-4-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.569 [nioEventLoopGroup-2-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.570 [nioEventLoopGroup-3-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.577 [nioEventLoopGroup-4-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.603 [nioEventLoopGroup-5-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.604 [nioEventLoopGroup-5-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.606 [nioEventLoopGroup-5-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.630 [nioEventLoopGroup-6-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.631 [nioEventLoopGroup-6-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.686 [nioEventLoopGroup-7-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.693 [nioEventLoopGroup-6-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.700 [nioEventLoopGroup-7-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.710 [nioEventLoopGroup-7-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.736 [nioEventLoopGroup-8-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.738 [nioEventLoopGroup-8-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.740 [nioEventLoopGroup-9-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.740 [nioEventLoopGroup-8-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.756 [nioEventLoopGroup-9-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.757 [nioEventLoopGroup-9-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.775 [nioEventLoopGroup-10-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.777 [nioEventLoopGroup-10-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.781 [nioEventLoopGroup-10-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.793 [nioEventLoopGroup-11-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.795 [nioEventLoopGroup-11-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.796 [nioEventLoopGroup-11-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.811 [nioEventLoopGroup-12-45] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:04.813 [nioEventLoopGroup-12-47] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:04.814 [nioEventLoopGroup-12-46] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:04.895 [nioEventLoopGroup-8-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.898 [nioEventLoopGroup-7-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.900 [nioEventLoopGroup-11-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.903 [nioEventLoopGroup-9-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.907 [nioEventLoopGroup-10-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.907 [nioEventLoopGroup-4-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.907 [nioEventLoopGroup-6-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.908 [nioEventLoopGroup-2-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.908 [nioEventLoopGroup-12-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.908 [nioEventLoopGroup-3-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:04.908 [nioEventLoopGroup-5-48] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.523 [nioEventLoopGroup-2-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.533 [nioEventLoopGroup-2-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.546 [nioEventLoopGroup-3-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.547 [nioEventLoopGroup-3-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.572 [nioEventLoopGroup-4-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.573 [nioEventLoopGroup-4-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.614 [nioEventLoopGroup-2-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.614 [nioEventLoopGroup-5-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.615 [nioEventLoopGroup-4-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.617 [nioEventLoopGroup-5-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.617 [nioEventLoopGroup-3-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.617 [nioEventLoopGroup-5-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.641 [nioEventLoopGroup-6-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.642 [nioEventLoopGroup-6-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.697 [nioEventLoopGroup-7-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.704 [nioEventLoopGroup-6-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.711 [nioEventLoopGroup-7-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.720 [nioEventLoopGroup-7-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.747 [nioEventLoopGroup-8-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.748 [nioEventLoopGroup-8-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.749 [nioEventLoopGroup-8-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.751 [nioEventLoopGroup-9-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.767 [nioEventLoopGroup-9-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.767 [nioEventLoopGroup-9-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.785 [nioEventLoopGroup-10-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.786 [nioEventLoopGroup-10-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.792 [nioEventLoopGroup-10-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.800 [nioEventLoopGroup-11-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.804 [nioEventLoopGroup-11-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.806 [nioEventLoopGroup-11-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.822 [nioEventLoopGroup-12-49] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:14.824 [nioEventLoopGroup-12-50] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:14.825 [nioEventLoopGroup-12-51] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:14.905 [nioEventLoopGroup-11-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.908 [nioEventLoopGroup-8-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.912 [nioEventLoopGroup-7-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.912 [nioEventLoopGroup-9-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.917 [nioEventLoopGroup-2-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.918 [nioEventLoopGroup-10-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.918 [nioEventLoopGroup-12-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.918 [nioEventLoopGroup-4-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.918 [nioEventLoopGroup-3-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.919 [nioEventLoopGroup-6-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:14.919 [nioEventLoopGroup-5-52] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.556 [nioEventLoopGroup-3-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.564 [nioEventLoopGroup-2-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.564 [nioEventLoopGroup-2-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.567 [nioEventLoopGroup-3-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.583 [nioEventLoopGroup-4-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.584 [nioEventLoopGroup-4-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.625 [nioEventLoopGroup-5-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.628 [nioEventLoopGroup-5-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.643 [nioEventLoopGroup-2-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.643 [nioEventLoopGroup-4-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.644 [nioEventLoopGroup-5-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.644 [nioEventLoopGroup-3-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.652 [nioEventLoopGroup-6-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.652 [nioEventLoopGroup-6-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.708 [nioEventLoopGroup-7-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.714 [nioEventLoopGroup-6-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.722 [nioEventLoopGroup-7-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.731 [nioEventLoopGroup-7-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.758 [nioEventLoopGroup-8-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.759 [nioEventLoopGroup-8-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.760 [nioEventLoopGroup-8-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.761 [nioEventLoopGroup-9-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.778 [nioEventLoopGroup-9-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.778 [nioEventLoopGroup-9-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.796 [nioEventLoopGroup-10-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.796 [nioEventLoopGroup-10-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.798 [nioEventLoopGroup-10-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.808 [nioEventLoopGroup-11-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.815 [nioEventLoopGroup-11-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.816 [nioEventLoopGroup-11-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.832 [nioEventLoopGroup-12-55] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:24.832 [nioEventLoopGroup-12-53] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:24.834 [nioEventLoopGroup-12-54] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:24.927 [nioEventLoopGroup-11-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.928 [nioEventLoopGroup-10-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.928 [nioEventLoopGroup-6-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.931 [nioEventLoopGroup-2-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.932 [nioEventLoopGroup-4-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.932 [nioEventLoopGroup-7-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.935 [nioEventLoopGroup-5-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.936 [nioEventLoopGroup-12-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.936 [nioEventLoopGroup-3-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.936 [nioEventLoopGroup-9-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:24.936 [nioEventLoopGroup-8-56] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.579 [nioEventLoopGroup-3-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.580 [nioEventLoopGroup-2-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.594 [nioEventLoopGroup-4-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.600 [nioEventLoopGroup-3-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.602 [nioEventLoopGroup-4-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.604 [nioEventLoopGroup-2-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.636 [nioEventLoopGroup-5-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.639 [nioEventLoopGroup-5-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.663 [nioEventLoopGroup-6-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.663 [nioEventLoopGroup-6-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.685 [nioEventLoopGroup-2-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.685 [nioEventLoopGroup-4-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.686 [nioEventLoopGroup-5-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.686 [nioEventLoopGroup-3-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.719 [nioEventLoopGroup-7-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.725 [nioEventLoopGroup-6-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.733 [nioEventLoopGroup-7-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.742 [nioEventLoopGroup-7-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.769 [nioEventLoopGroup-8-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.769 [nioEventLoopGroup-8-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.770 [nioEventLoopGroup-8-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.772 [nioEventLoopGroup-9-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.789 [nioEventLoopGroup-9-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.789 [nioEventLoopGroup-9-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.807 [nioEventLoopGroup-10-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.808 [nioEventLoopGroup-10-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.808 [nioEventLoopGroup-10-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.819 [nioEventLoopGroup-11-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.820 [nioEventLoopGroup-11-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.824 [nioEventLoopGroup-11-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.840 [nioEventLoopGroup-12-58] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:34.842 [nioEventLoopGroup-12-57] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:34.844 [nioEventLoopGroup-12-59] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:34.962 [nioEventLoopGroup-5-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.968 [nioEventLoopGroup-11-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.968 [nioEventLoopGroup-7-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.969 [nioEventLoopGroup-3-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.969 [nioEventLoopGroup-9-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.969 [nioEventLoopGroup-8-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.970 [nioEventLoopGroup-2-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.970 [nioEventLoopGroup-10-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.970 [nioEventLoopGroup-6-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.970 [nioEventLoopGroup-4-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:34.971 [nioEventLoopGroup-12-60] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.600 [nioEventLoopGroup-4-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.604 [nioEventLoopGroup-3-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.609 [nioEventLoopGroup-2-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.615 [nioEventLoopGroup-4-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.619 [nioEventLoopGroup-3-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.619 [nioEventLoopGroup-2-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.647 [nioEventLoopGroup-5-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.650 [nioEventLoopGroup-5-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.673 [nioEventLoopGroup-6-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.674 [nioEventLoopGroup-6-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.696 [nioEventLoopGroup-2-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.702 [nioEventLoopGroup-5-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.705 [nioEventLoopGroup-3-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.705 [nioEventLoopGroup-4-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.730 [nioEventLoopGroup-7-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.735 [nioEventLoopGroup-6-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.743 [nioEventLoopGroup-7-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.752 [nioEventLoopGroup-7-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.780 [nioEventLoopGroup-8-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.780 [nioEventLoopGroup-8-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.780 [nioEventLoopGroup-9-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.781 [nioEventLoopGroup-8-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.797 [nioEventLoopGroup-9-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.800 [nioEventLoopGroup-9-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.818 [nioEventLoopGroup-10-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.818 [nioEventLoopGroup-10-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.819 [nioEventLoopGroup-10-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.828 [nioEventLoopGroup-11-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.830 [nioEventLoopGroup-11-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.835 [nioEventLoopGroup-11-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.851 [nioEventLoopGroup-12-61] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 1 at 1.node.bft:11000
+2020-10-12 07:53:44.853 [nioEventLoopGroup-12-62] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 0 at 0.node.bft:11000
+2020-10-12 07:53:44.855 [nioEventLoopGroup-12-63] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 3 at 3.node.bft:11000
+2020-10-12 07:53:44.983 [nioEventLoopGroup-3-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.983 [nioEventLoopGroup-7-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.983 [nioEventLoopGroup-12-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.984 [nioEventLoopGroup-8-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.987 [nioEventLoopGroup-5-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.987 [nioEventLoopGroup-11-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.988 [nioEventLoopGroup-2-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.988 [nioEventLoopGroup-9-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.988 [nioEventLoopGroup-10-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.992 [nioEventLoopGroup-4-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
+2020-10-12 07:53:44.992 [nioEventLoopGroup-6-64] INFO  b.c.c.n.NettyClientServerCommunicationSystemClientSide - re-connecting to replica 2 at 2.node.bft:11000
