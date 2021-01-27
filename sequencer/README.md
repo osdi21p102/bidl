@@ -8,7 +8,7 @@
 # Compile Sequencer
 
 ```bash
-g++ -std=c++11 sequencer.cpp
+g++ -std=c++11 sequencer.cpp -o sequencer
 ```
 
 # Test Sequencer
