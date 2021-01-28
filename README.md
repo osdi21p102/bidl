@@ -5,7 +5,8 @@ BIDL is a high-throughput and low-latency permissioned blockchain framework for 
 # Architecture
 
 - `bidl`: BIDL source code and evaluation scripts;
-- `sequencer`: sequencer code and evaluation scripts;
+- `sequencer`: c++ software sequencer code and evaluation scripts;
+- `dpdk-sequencer`: dpdk software sequencer code, config instructions, and run scripts;
 - `hlf code`: Hyperledger Fabric with memory cache of the state database;
 - `hlf scripts`: Hyperledger Fabric evaluation scripts.
 
